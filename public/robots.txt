@@ -1,3 +1,21 @@
-# https://www.robotstxt.org/robotstxt.html
+# robots.txt — tells search engines what to crawl
+# Place this in your /public folder
+
 User-agent: *
-Disallow:
+Allow: /
+Allow: /deals
+Allow: /coupons
+Allow: /stores
+Allow: /blog
+Allow: /partners
+
+# Block admin and private pages from being indexed
+Disallow: /admin
+Disallow: /tracker
+Disallow: /api/
+
+# Sitemap location — replace with your real domain
+Sitemap: https://YOUR-DOMAIN.com/sitemap.xml
+
+# Crawl delay (optional — be nice to bots)
+Crawl-delay: 1

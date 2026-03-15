@@ -1,70 +1,187 @@
-# Getting Started with Create React App
+# 💸 DealKaro v4.1 — Complete Affiliate Cashback Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+India's most complete cashback & deals website. Built with React.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Quick Start
 
-### `npm start`
+```bash
+npm install
+npm start        # Development
+npm run build    # Production build
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📁 File Structure
 
-### `npm test`
+```
+src/
+├── App.jsx          # Main app — all pages, state, modals
+├── components.jsx   # SpinWheel, ShareButtons, AIChatbot, LoginModal, LoyaltyBar, ExpiryTimer, ProfileDropdown
+├── hooks.js         # usePersist, useCountdown, useToast, usePoints, useAuth
+├── data.js          # All products, stores, coupons, REDIRECT_MAP
+├── index.js         # Entry point
+public/
+├── index.html       # GA4 + FB Pixel + PWA meta tags
+├── manifest.json    # PWA manifest (installable app)
+├── sw.js            # Service worker (offline + push notifications)
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## ✅ Complete Feature List (v4.1)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🔐 Security
+- **Secure link redirector** — Real affiliate URLs only in `REDIRECT_MAP`. Users see `/go/amz-tv-1` not your tag
+- Move `REDIRECT_MAP` to backend `/api/go/:slug` for full server-side protection
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 💰 Monetization
+- Affiliate links for Amazon, Flipkart, Myntra, Nykaa, Ajio, Swiggy, MakeMyTrip, Meesho
+- Cashback tracker with purchase history
+- Coupon codes with copy-to-clipboard
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🤖 AI Features
+- **AI Deal Finder chatbot** — Powered by Claude AI. Users type naturally, get matched products with quick-shop cards
 
-### `npm run eject`
+### 🎮 Engagement
+- **Spin & Win wheel** — Gamified coupon reveal (auto-shows after 20s, once per day)
+- **Loyalty points system** — Earn points for clicks, shares, signups, purchases
+- **Referral system** — Unique referral links per user
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 👤 User System
+- **Login modal** — Google OAuth + Phone OTP (mock, connect Firebase/Supabase in production)
+- **User profile dropdown** — Points, level, quick navigation
+- **Persistent state** — Wishlist, tracker, dark mode saved via localStorage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🛍️ Shopping
+- 12 curated products with real Unsplash images
+- **Price comparison** across stores
+- **Per-product expiry timers** (live countdown)
+- **Out of stock badges** with disabled state
+- **Trending badge** (auto-marks products with 8k+ clicks)
+- **Flash sale timer** (site-wide 48hr countdown)
+- **Advanced filters** — Sort by discount, cashback, price, rating, expiry
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 📱 Mobile & PWA
+- **PWA manifest** — Users can install as app on phone homescreen
+- **Service worker** — Offline support + push notifications
+- **Mobile hamburger nav** — Full slide-out menu
+- **Dark mode** — Full dark theme, persisted
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 🌐 Language
+- **Hindi / English toggle** — Every label switches instantly
 
-## Learn More
+### 📣 Social & Growth
+- **Share buttons** on every product — WhatsApp, Telegram, Twitter, Copy Link
+- **Newsletter popup** (EmailJS-ready, auto-shows at 10s)
+- **WhatsApp Group link** in footer
+- **Referral link** with copy button
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 📜 Legal (required by affiliate programs)
+- Privacy Policy
+- Terms of Use
+- Affiliate Disclosure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### ❓ Trust
+- How Cashback Works page (6-step explainer)
+- User-submitted reviews with star rating
 
-### Code Splitting
+### 📊 Analytics
+- Google Analytics 4 placeholder in index.html
+- Facebook Pixel placeholder in index.html
+- `trackEvent()` helper throughout app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 🔍 SEO
+- Dynamic `<title>` and meta tags per page
+- Open Graph tags for social sharing
+- Structured data (JSON-LD)
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🔧 Setup Checklist
 
-### Making a Progressive Web App
+### 1. Replace Affiliate Links
+In `src/data.js`, find `REDIRECT_MAP` and replace:
+- `YOUR_AMAZON_TAG` → your Amazon Associates tag
+- `YOUR_FLIPKART_TAG` → your Flipkart affiliate ID
+- `YOUR_MYNTRA_TAG` → your Myntra affiliate tag
+- etc.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 2. Add Analytics IDs
+In `public/index.html`:
+- Replace `G-XXXXXXXXXX` with your Google Analytics 4 measurement ID
+- Replace `YOUR_PIXEL_ID` with your Facebook Pixel ID
 
-### Advanced Configuration
+### 3. Connect EmailJS (Newsletter)
+In `src/App.jsx`, find the comment `// INTEGRATION: emailjs.send(...)` and add:
+```js
+import emailjs from '@emailjs/browser';
+emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+  name: nlForm.name,
+  contact: nlForm.contact,
+  from_name: "DealKaro",
+});
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 4. Connect Firebase Auth (Login)
+In `src/components.jsx`, replace mock login functions with:
+```js
+import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+const result = await signInWithPopup(auth, new GoogleAuthProvider());
+onLogin({ name: result.user.displayName, email: result.user.email, ... });
+```
 
-### Deployment
+### 5. Connect Firebase/Supabase (Persistent User Data)
+Replace `usePersist` localStorage calls with real database saves for:
+- Wishlist
+- Purchase history
+- Loyalty points
+- Newsletter subscribers
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 6. Backend Redirect API (Most Important for Security)
+Create an Express/Next.js endpoint:
+```js
+app.get('/api/go/:slug', (req, res) => {
+  const url = REDIRECT_MAP[req.params.slug];
+  if (!url) return res.status(404).json({ error: 'Not found' });
+  // Log the click here for analytics
+  res.json({ url });
+});
+```
+Then in `App.jsx` replace `goTo()` with:
+```js
+const { url } = await fetch(`/api/go/${slug}`).then(r => r.json());
+window.open(url, '_blank', 'noopener,noreferrer');
+```
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🌐 Deploy to Vercel (Free)
+
+1. Push to GitHub
+2. Go to vercel.com → Import Project
+3. Select your repo
+4. Click Deploy
+
+Your site will be live at `yourproject.vercel.app` in ~2 minutes.
+
+---
+
+## 💡 Affiliate Programs to Sign Up For
+
+| Store | Program | URL |
+|-------|---------|-----|
+| Amazon | Amazon Associates India | affiliate-program.amazon.in |
+| Flipkart | Flipkart Affiliate | affiliate.flipkart.com |
+| Myntra | Admitad / vCommission | vcommission.com |
+| Nykaa | vCommission | vcommission.com |
+| Ajio | vCommission | vcommission.com |
+| Swiggy | Apply directly | swiggy.com/affiliate |
+| MakeMyTrip | MMT Affiliate | affiliate.makemytrip.com |
+
+---
+
+## 📞 Support
+Email: support@dealkaro.in
