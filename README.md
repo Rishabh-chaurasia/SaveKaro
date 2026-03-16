@@ -1,4 +1,4 @@
-# 💸 DealKaro v4.1 — Complete Affiliate Cashback Platform
+# 💸 SaveKaro v4.1 — Complete Affiliate Cashback Platform
 
 India's most complete cashback & deals website. Built with React.
 
@@ -121,7 +121,7 @@ import emailjs from '@emailjs/browser';
 emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
   name: nlForm.name,
   contact: nlForm.contact,
-  from_name: "DealKaro",
+  from_name: "SaveKaro",
 });
 ```
 
@@ -184,4 +184,4 @@ Your site will be live at `yourproject.vercel.app` in ~2 minutes.
 ---
 
 ## 📞 Support
-Email: support@dealkaro.in
+Email: support@SaveKaro.in
