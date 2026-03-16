@@ -411,7 +411,7 @@ export function DealShareCard({ product, D, onClose }) {
 
     // Brand label
     ctx.fillStyle="#FF5722"; ctx.font="bold 28px Arial"; ctx.textAlign="left";
-    ctx.fillText("💸 DealKaro.in", 100, 140);
+    ctx.fillText("💸 SaveKaro.in", 100, 140);
 
     // Store chip
     ctx.fillStyle=`${product.storeColor}22`;
@@ -448,7 +448,7 @@ export function DealShareCard({ product, D, onClose }) {
     ctx.fillStyle=ctaGrad;
     ctx.beginPath(); ctx.roundRect(100,840,W-220,100,20); ctx.fill();
     ctx.fillStyle="#fff"; ctx.font="bold 38px Arial"; ctx.textAlign="center";
-    ctx.fillText("🛒 Shop via DealKaro & Earn Cashback →", W/2, 900);
+    ctx.fillText("🛒 Shop via SaveKaro & Earn Cashback →", W/2, 900);
 
     // Rating stars
     ctx.fillStyle="#F6AD55"; ctx.font="bold 32px Arial"; ctx.textAlign="left";
@@ -463,14 +463,14 @@ export function DealShareCard({ product, D, onClose }) {
   const download = () => {
     setDownloading(true);
     const link = document.createElement("a");
-    link.download = `dealkaro-${product.slug}.png`;
+    link.download = `SaveKaro-${product.slug}.png`;
     link.href = canvasRef.current.toDataURL("image/png");
     link.click();
     setTimeout(() => setDownloading(false), 1000);
   };
 
   const share = () => {
-    const text = `🔥 ${product.title}\n₹${product.price.toLocaleString("en-IN")} (${disc(product.mrp,product.price)}% OFF) + ${product.cashbackPct}% cashback!\n\nShop via DealKaro: ${SITE.url}/?deal=${product.slug}`;
+    const text = `🔥 ${product.title}\n₹${product.price.toLocaleString("en-IN")} (${disc(product.mrp,product.price)}% OFF) + ${product.cashbackPct}% cashback!\n\nShop via SaveKaro: ${SITE.url}/?deal=${product.slug}`;
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`,"_blank");
   };
 

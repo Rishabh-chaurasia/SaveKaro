@@ -10,7 +10,7 @@ export const BLOG_POSTS = [
     slug: "best-earphones-under-2000",
     title: "Best Earphones Under ₹2000 in 2026",
     metaTitle: "Best Earphones Under ₹2000 in India 2026 — Tested & Ranked",
-    metaDesc: "Looking for the best earphones under ₹2000? We tested 10+ options. Our top pick gives you 36hr battery, deep bass and extra 8% cashback via DealKaro.",
+    metaDesc: "Looking for the best earphones under ₹2000? We tested 10+ options. Our top pick gives you 36hr battery, deep bass and extra 8% cashback via SaveKaro.",
     category: "Electronics",
     date: "March 12, 2026",
     readTime: "5 min read",
@@ -22,7 +22,7 @@ export const BLOG_POSTS = [
       {
         heading: "🥇 #1 boAt Airdopes 141 — Best Overall",
         content: "The boAt Airdopes 141 is our top pick and for good reason. You get 42 hours of total playback (6hrs earbuds + 36hrs case), instant pairing, and surprisingly punchy bass for the price. At just ₹1,199 (down from ₹4,990), this is an absolute steal.",
-        highlight: "₹1,199 on Amazon | +8% Cashback via DealKaro = Save ₹96 extra",
+        highlight: "₹1,199 on Amazon | +8% Cashback via SaveKaro = Save ₹96 extra",
         productSlug: "amz-boat-3",
         productStore: "Amazon",
         pros: ["42hr total battery", "ENx noise cancellation for calls", "Instant pairing", "IPX4 water resistant"],
@@ -40,7 +40,7 @@ export const BLOG_POSTS = [
       {
         heading: "🥉 #3 Realme Buds Q2 — Best for Calls",
         content: "The Realme Buds Q2 have the best microphone quality in this segment. If you take a lot of calls or attend online classes, these outperform everything else under ₹2000 for voice clarity.",
-        highlight: "₹1,499 on Flipkart | +3% Cashback via DealKaro",
+        highlight: "₹1,499 on Flipkart | +3% Cashback via SaveKaro",
         productSlug: "go-flipkart",
         productStore: "Flipkart",
         pros: ["Crystal clear mic", "ANC (active noise cancellation)", "28hr total battery", "Premium build quality"],
@@ -57,7 +57,7 @@ export const BLOG_POSTS = [
         "Codec support — AAC codec gives better audio quality on iPhones. SBC is fine for most use.",
       ],
     },
-    conclusion: "For most users, the boAt Airdopes 141 is the clear winner at ₹1,199. If you need better call quality, go for Realme Buds Q2. Don't forget to shop through DealKaro to earn cashback on top of the already-discounted prices!",
+    conclusion: "For most users, the boAt Airdopes 141 is the clear winner at ₹1,199. If you need better call quality, go for Realme Buds Q2. Don't forget to shop through SaveKaro to earn cashback on top of the already-discounted prices!",
   },
   {
     id: 2,
@@ -92,9 +92,9 @@ export const BLOG_POSTS = [
         cons: ["Bank offers have capped discount limits (usually ₹1,500–₹3,000)"],
       },
       {
-        heading: "💰 Add DealKaro Cashback on Top",
-        content: "Here's what most people miss: clicking through DealKaro before buying gives you 3% cashback on Flipkart and 5% on Amazon purchases. On a ₹70,000 phone, that's ₹2,100–₹3,500 back in your pocket — on top of any sale price.",
-        highlight: "Always click DealKaro link first → THEN apply bank card offer for maximum savings!",
+        heading: "💰 Add SaveKaro Cashback on Top",
+        content: "Here's what most people miss: clicking through SaveKaro before buying gives you 3% cashback on Flipkart and 5% on Amazon purchases. On a ₹70,000 phone, that's ₹2,100–₹3,500 back in your pocket — on top of any sale price.",
+        highlight: "Always click SaveKaro link first → THEN apply bank card offer for maximum savings!",
         productSlug: "fk-iphone-2",
         productStore: "Flipkart",
         pros: ["3% cashback on Flipkart = ₹2,100 on iPhone 15", "Stacks with bank card discounts", "Tracked automatically"],
@@ -106,13 +106,13 @@ export const BLOG_POSTS = [
       points: [
         "Step 1: Check both Amazon and Flipkart current prices (prices change daily).",
         "Step 2: Check if any bank card offers are live on either platform.",
-        "Step 3: Click DealKaro's link to whichever platform has the lower final price.",
+        "Step 3: Click SaveKaro's link to whichever platform has the lower final price.",
         "Step 4: Add to cart and apply your bank card offer code.",
-        "Step 5: Complete purchase — DealKaro cashback is automatically tracked.",
-        "Step 6: Track your cashback in DealKaro's 'My Cashback' section.",
+        "Step 5: Complete purchase — SaveKaro cashback is automatically tracked.",
+        "Step 6: Track your cashback in SaveKaro's 'My Cashback' section.",
       ],
     },
-    conclusion: "Flipkart is usually cheaper day-to-day, but Amazon wins during their mega sales. The real winner is using DealKaro links on whichever platform is cheaper — you get the lowest price PLUS cashback on top.",
+    conclusion: "Flipkart is usually cheaper day-to-day, but Amazon wins during their mega sales. The real winner is using SaveKaro links on whichever platform is cheaper — you get the lowest price PLUS cashback on top.",
   },
   {
     id: 3,
@@ -140,7 +140,7 @@ export const BLOG_POSTS = [
       {
         heading: "🏷️ Best Brands to Buy During Myntra Sale",
         content: "Not all discounts are equal. These brands consistently offer the deepest genuine discounts (not inflated MRP tricks): Levis, H&M, Roadster, W, Biba, Only, Vero Moda, Jack & Jones, and US Polo. Avoid buying luxury brands during sales — their 'discounts' are usually smaller than they appear.",
-        highlight: "Levis 511 Jeans: ₹3,999 → ₹1,999 (50% OFF) + 12% cashback via DealKaro",
+        highlight: "Levis 511 Jeans: ₹3,999 → ₹1,999 (50% OFF) + 12% cashback via SaveKaro",
         productSlug: "myn-jeans-4",
         productStore: "Myntra",
         pros: ["H&M, Levis, Roadster = genuine 50%+ discounts", "Mix & match offers stack well"],
@@ -161,13 +161,13 @@ export const BLOG_POSTS = [
       points: [
         "2 weeks before: Add desired items to Myntra wishlist (triggers personal discount alerts).",
         "1 week before: Check current prices so you know real vs fake discounts.",
-        "Sale day: Click DealKaro's Myntra link first to activate 12% cashback tracking.",
+        "Sale day: Click SaveKaro's Myntra link first to activate 12% cashback tracking.",
         "Use Myntra app (not website) for app-exclusive deals.",
         "Apply any bank card offer at checkout for extra 5–10% off.",
-        "Track your 12% cashback in DealKaro's My Cashback section.",
+        "Track your 12% cashback in SaveKaro's My Cashback section.",
       ],
     },
-    conclusion: "The key to maximising Myntra sale savings is preparation, going through DealKaro for 12% cashback, and shopping in the first hours before sizes sell out. Happy shopping!",
+    conclusion: "The key to maximising Myntra sale savings is preparation, going through SaveKaro for 12% cashback, and shopping in the first hours before sizes sell out. Happy shopping!",
   },
   {
     id: 4,
@@ -181,7 +181,7 @@ export const BLOG_POSTS = [
     image: "https://images.unsplash.com/photo-1586495777744-4e6232bf0877?w=800&q=80",
     featured: false,
     tags: ["nykaa", "beauty", "skincare", "makeup", "deals"],
-    intro: "Nykaa is India's go-to destination for beauty and skincare. This month they have some exceptional deals — here are our top picks with an extra 7% cashback when you shop through DealKaro.",
+    intro: "Nykaa is India's go-to destination for beauty and skincare. This month they have some exceptional deals — here are our top picks with an extra 7% cashback when you shop through SaveKaro.",
     sections: [
       {
         heading: "🌟 Deal #1: Minimalist Niacinamide Serum (Viral Skincare)",
@@ -206,7 +206,7 @@ export const BLOG_POSTS = [
       title: "How to Save the Most on Nykaa",
       points: [
         "Use Nykaa app — app offers are usually 5% cheaper than website.",
-        "Click DealKaro's Nykaa link first to activate 7% cashback tracking.",
+        "Click SaveKaro's Nykaa link first to activate 7% cashback tracking.",
         "Apply NYKAA15 coupon code at checkout for an extra 15% off orders above ₹599.",
         "Buy during Nykaa Pink Friday sale (November) for deepest discounts of the year.",
         "Check 'Nykaa Offers' section for bank card deals before checkout.",

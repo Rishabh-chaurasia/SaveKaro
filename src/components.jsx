@@ -112,7 +112,7 @@ export function SpinWheel({ D, onClose, onWin }) {
 export function ShareButtons({ product, D }) {
   const [open, setOpen] = useState(false);
   const url = `${SITE.url}?deal=${product.slug}`;
-  const text = `🔥 ${product.title} at just ₹${product.price.toLocaleString("en-IN")} (${Math.round(((product.mrp-product.price)/product.mrp)*100)}% OFF)! + ${product.cashbackPct}% cashback via DealKaro`;
+  const text = `🔥 ${product.title} at just ₹${product.price.toLocaleString("en-IN")} (${Math.round(((product.mrp-product.price)/product.mrp)*100)}% OFF)! + ${product.cashbackPct}% cashback via SaveKaro`;
 
   const share = (platform) => {
     const links = {
@@ -258,7 +258,7 @@ export function LoginModal({ D, onClose, onLogin }) {
       <div style={{ background:D.card,borderRadius:22,padding:"36px 30px",maxWidth:380,width:"92%",textAlign:"center",position:"relative",color:D.text }}>
         <button onClick={onClose} style={{ position:"absolute",top:14,right:16,background:"none",border:"none",fontSize:22,cursor:"pointer",color:D.sub }}>✕</button>
         <div style={{ fontSize:44,marginBottom:10 }}>👤</div>
-        <h2 style={{ fontWeight:900,fontSize:20,marginBottom:4 }}>Join DealKaro</h2>
+        <h2 style={{ fontWeight:900,fontSize:20,marginBottom:4 }}>Join SaveKaro</h2>
         <p style={{ color:D.sub,fontSize:13,marginBottom:24,lineHeight:1.6 }}>Sign in to save wishlist, track cashback & earn loyalty points</p>
 
         {mode === "options" && (
@@ -312,7 +312,7 @@ export function LoginModal({ D, onClose, onLogin }) {
 ══════════════════════════════════ */
 export function AIChatbot({ D, products, onShop, onClose }) {
   const [messages, setMessages] = useState([
-    { role:"assistant", text:"Hi! 👋 I'm DealKaro AI. Tell me what you're looking for — like 'best earphones under ₹2000' or 'top deals on women fashion'." }
+    { role:"assistant", text:"Hi! 👋 I'm SaveKaro AI. Tell me what you're looking for — like 'best earphones under ₹2000' or 'top deals on women fashion'." }
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -339,7 +339,7 @@ export function AIChatbot({ D, products, onShop, onClose }) {
         body:JSON.stringify({
           model:"claude-sonnet-4-20250514",
           max_tokens:600,
-          system:`You are DealKaro AI, a helpful shopping assistant for an Indian cashback & deals website. Your job is to recommend the best deals from our product catalog based on what users ask.
+          system:`You are SaveKaro AI, a helpful shopping assistant for an Indian cashback & deals website. Your job is to recommend the best deals from our product catalog based on what users ask.
 
 PRODUCT CATALOG:
 ${productContext}
@@ -384,7 +384,7 @@ INSTRUCTIONS:
           <div style={{ display:"flex",alignItems:"center",gap:10 }}>
             <div style={{ width:36,height:36,background:"rgba(255,255,255,.2)",borderRadius:"50%",display:"flex",alignItems:"center",justifyContent:"center",fontSize:18 }}>🤖</div>
             <div>
-              <div style={{ color:"#fff",fontWeight:800,fontSize:14 }}>DealKaro AI</div>
+              <div style={{ color:"#fff",fontWeight:800,fontSize:14 }}>SaveKaro AI</div>
               <div style={{ color:"rgba(255,255,255,.7)",fontSize:11 }}>Find the best deals instantly</div>
             </div>
           </div>

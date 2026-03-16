@@ -98,7 +98,7 @@ export function PWAInstallBanner({ D, onDismiss }) {
       <div style={{ display:"flex",alignItems:"center",gap:12 }}>
         <div style={{ background:"linear-gradient(135deg,#FF5722,#FF9800)",borderRadius:12,width:44,height:44,display:"flex",alignItems:"center",justifyContent:"center",fontSize:22,flexShrink:0 }}>💸</div>
         <div>
-          <div style={{ color:"#fff",fontWeight:800,fontSize:14 }}>Install DealKaro App</div>
+          <div style={{ color:"#fff",fontWeight:800,fontSize:14 }}>Install SaveKaro App</div>
           <div style={{ color:"#a0aec0",fontSize:12 }}>Get instant deal alerts • Works offline • No Play Store needed</div>
         </div>
       </div>
@@ -171,9 +171,9 @@ export function AntiAdblockBanner({ D, onClose }) {
     <div style={{ position:"fixed",inset:0,background:"rgba(0,0,0,.6)",zIndex:9100,display:"flex",alignItems:"center",justifyContent:"center" }}>
       <div style={{ background:D.card,borderRadius:20,padding:"36px 32px",maxWidth:420,width:"92%",textAlign:"center",color:D.text,animation:"popIn .3s ease" }}>
         <div style={{ fontSize:56,marginBottom:14 }}>🙏</div>
-        <h2 style={{ fontWeight:900,fontSize:20,marginBottom:8 }}>Please support DealKaro</h2>
+        <h2 style={{ fontWeight:900,fontSize:20,marginBottom:8 }}>Please support SaveKaro</h2>
         <p style={{ color:D.sub,fontSize:14,lineHeight:1.7,marginBottom:20 }}>
-          We noticed you're using an ad blocker. DealKaro is completely free — we earn a small commission when you shop through our links (no extra cost to you). No annoying ads, just great deals!
+          We noticed you're using an ad blocker. SaveKaro is completely free — we earn a small commission when you shop through our links (no extra cost to you). No annoying ads, just great deals!
         </p>
         <div style={{ background:D.bg,borderRadius:12,padding:"14px",marginBottom:24 }}>
           <div style={{ fontSize:13,fontWeight:700,marginBottom:4 }}>How we make money 💡</div>
@@ -341,7 +341,7 @@ export function BlogPage({ D, dark, onNavigate }) {
     <div style={{ padding:"32px 6%" }}>
       {/* SEO */}
       <div style={{ marginBottom:28 }}>
-        <h1 style={{ fontSize:26,fontWeight:900,marginBottom:6 }}>📰 DealKaro Blog</h1>
+        <h1 style={{ fontSize:26,fontWeight:900,marginBottom:6 }}>📰 SaveKaro Blog</h1>
         <p style={{ color:D.sub,fontSize:14 }}>Expert buying guides, price comparisons & money-saving tips for Indian shoppers</p>
       </div>
 
@@ -484,7 +484,7 @@ function BlogPostPage({ D, dark, post, onBack }) {
       <div style={{ background:"linear-gradient(135deg,#25D366,#128C7E)",borderRadius:14,padding:"20px",textAlign:"center" }}>
         <h3 style={{ color:"#fff",fontWeight:900,fontSize:16,marginBottom:6 }}>📣 Found this helpful?</h3>
         <p style={{ color:"rgba(255,255,255,.85)",fontSize:13,marginBottom:14 }}>Share with friends and family on WhatsApp — help them save money too!</p>
-        <button onClick={() => window.open(`https://wa.me/?text=${encodeURIComponent(`📖 ${post.title}\n\nRead this guide on DealKaro to save money:\nhttps://dealkaro.in/blog/${post.slug}`)}`, "_blank")}
+        <button onClick={() => window.open(`https://wa.me/?text=${encodeURIComponent(`📖 ${post.title}\n\nRead this guide on SaveKaro to save money:\nhttps://SaveKaro.in/blog/${post.slug}`)}`, "_blank")}
           style={{ background:"#fff",color:"#128C7E",border:"none",borderRadius:10,padding:"11px 24px",fontWeight:800,cursor:"pointer",fontSize:14,fontFamily:"inherit" }}>
           💬 Share on WhatsApp
         </button>

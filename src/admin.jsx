@@ -92,7 +92,7 @@ export function AdminDashboard({ D, onClose }) {
         <div style={{ display:"flex",alignItems:"center",gap:12 }}>
           <div style={{ background:"linear-gradient(135deg,#FF5722,#FF9800)",borderRadius:10,width:36,height:36,display:"flex",alignItems:"center",justifyContent:"center",fontSize:18 }}>💸</div>
           <div>
-            <div style={{ color:"#fff",fontWeight:900,fontSize:16 }}>DealKaro Admin</div>
+            <div style={{ color:"#fff",fontWeight:900,fontSize:16 }}>SaveKaro Admin</div>
             <div style={{ color:"#68D391",fontSize:11,fontWeight:600 }}>● Live Dashboard</div>
           </div>
         </div>

@@ -1,5 +1,5 @@
-/* DealKaro Service Worker — PWA offline support */
-const CACHE = "dealkaro-v1";
+/* SaveKaro Service Worker — PWA offline support */
+const CACHE = "SaveKaro-v1";
 const ASSETS = ["/", "/index.html", "/static/js/main.chunk.js", "/static/css/main.chunk.css"];
 
 self.addEventListener("install", e => {
@@ -27,7 +27,7 @@ self.addEventListener("fetch", e => {
 
 /* Push notifications support */
 self.addEventListener("push", e => {
-  const data = e.data?.json() || { title: "DealKaro", body: "New deal alert! 🔥" };
+  const data = e.data?.json() || { title: "SaveKaro", body: "New deal alert! 🔥" };
   e.waitUntil(self.registration.showNotification(data.title, {
     body: data.body, icon: "/logo192.png", badge: "/logo192.png",
     data: { url: data.url || "/" },

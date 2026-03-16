@@ -174,7 +174,7 @@ export function SkeletonGrid({ count=8 }) {
 export class ErrorBoundary extends Component {
   constructor(props) { super(props); this.state = { hasError:false, error:null }; }
   static getDerivedStateFromError(error) { return { hasError:true, error }; }
-  componentDidCatch(error, info) { console.error("DealKaro Error:", error, info); }
+  componentDidCatch(error, info) { console.error("SaveKaro Error:", error, info); }
   render() {
     if (!this.state.hasError) return this.props.children;
     return (
@@ -322,7 +322,7 @@ export function DealSubmissionForm({ D, onClose, showToast }) {
             <div style={{ fontSize:56,marginBottom:12 }}>🎉</div>
             <h2 style={{ fontWeight:900,fontSize:20,marginBottom:8 }}>Deal Submitted!</h2>
             <p style={{ color:D.sub,fontSize:14,lineHeight:1.7,marginBottom:20 }}>
-              Our team will review your deal within 24 hours. If approved, it'll be live on DealKaro and you'll get credited +50 loyalty points!
+              Our team will review your deal within 24 hours. If approved, it'll be live on SaveKaro and you'll get credited +50 loyalty points!
             </p>
             <button onClick={onClose} style={{ background:"linear-gradient(135deg,#FF5722,#FF9800)",color:"#fff",border:"none",borderRadius:12,padding:"12px 28px",fontWeight:800,cursor:"pointer",fontSize:14,fontFamily:"inherit" }}>Done ✓</button>
           </div>
@@ -406,13 +406,13 @@ export function WhatsAppBroadcast({ D, onClose }) {
 💰 Price: *₹${selectedProduct.price.toLocaleString("en-IN")}* ~~₹${selectedProduct.mrp.toLocaleString("en-IN")}~~
 🏷️ ${Math.round(((selectedProduct.mrp-selectedProduct.price)/selectedProduct.mrp)*100)}% OFF + *${selectedProduct.cashbackPct}% extra cashback*
 
-🛒 Shop via DealKaro (cashback tracked automatically):
+🛒 Shop via SaveKaro (cashback tracked automatically):
 👉 ${SITE.url}/?deal=${selectedProduct.slug}
 
 ⏰ Limited time offer!
 📲 Join our deals group: ${SITE.whatsappGroup || "https://chat.whatsapp.com/YOUR_GROUP"}
 
-_DealKaro — Shop Smart, Earn Cashback_ 💸`;
+_SaveKaro — Shop Smart, Earn Cashback_ 💸`;
 
   const copy = () => {
     navigator.clipboard.writeText(message).catch(()=>{});

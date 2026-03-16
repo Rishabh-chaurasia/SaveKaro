@@ -25,7 +25,7 @@ export function SubAffiliatePage({ D }) {
   const [submitted, setSubmitted] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
 
-  const myLink = "https://dealkaro.in?ref=PARTNER_CODE";
+  const myLink = "https://SaveKaro.in?ref=PARTNER_CODE";
 
   const handleSubmit = () => {
     if (!form.name || !form.email || !form.platform) return;
@@ -48,7 +48,7 @@ export function SubAffiliatePage({ D }) {
         {/* Header */}
         <div style={{ textAlign:"center",marginBottom:36 }}>
           <div style={{ fontSize:48,marginBottom:10 }}>🤝</div>
-          <h1 style={{ fontSize:28,fontWeight:900,marginBottom:8 }}>DealKaro Partner Network</h1>
+          <h1 style={{ fontSize:28,fontWeight:900,marginBottom:8 }}>SaveKaro Partner Network</h1>
           <p style={{ color:D.sub,fontSize:16,lineHeight:1.7,maxWidth:580,margin:"0 auto" }}>
             Are you a blogger, influencer, or WhatsApp group admin? Join our partner program and earn up to 30% commission on every sale you refer.
           </p>
@@ -185,7 +185,7 @@ export function SubAffiliatePage({ D }) {
         {tab === "partners" && (
           <div>
             <p style={{ color:D.sub,fontSize:14,marginBottom:20,lineHeight:1.6 }}>
-              Our top-performing partners earn ₹5,000–₹25,000/month by sharing DealKaro links with their audience.
+              Our top-performing partners earn ₹5,000–₹25,000/month by sharing SaveKaro links with their audience.
             </p>
             <div style={{ display:"flex",flexDirection:"column",gap:12 }}>
               {MOCK_PARTNERS.map((p,i)=>(
