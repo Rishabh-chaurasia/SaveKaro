@@ -569,7 +569,7 @@ export default function App() {
           ))}
         </div>
         <div style={{ borderTop:"1px solid #2d3748",paddingTop:18,display:"flex",justifyContent:"space-between",flexWrap:"wrap",gap:10,fontSize:11,color:"#718096" }}>
-          <span>© 2026 DealKaro. All rights reserved.</span>
+          <span>© 2026 SaveKaro. All rights reserved.</span>
           <span>Affiliate Disclosure: We earn a commission on purchases via our links — at no extra cost to you.</span>
         </div>
       </footer>
@@ -646,7 +646,7 @@ function HomePage({ D, dark, lang, bannerIdx, setBannerIdx, onShop, onNavigate, 
         <button onClick={onReferral} style={{ background:linkCopied?"#48BB78":"#fff",color:linkCopied?"#fff":"#6C63FF",border:"none",borderRadius:12,padding:"12px 24px",fontWeight:800,cursor:"pointer",fontSize:13,fontFamily:"inherit",flexShrink:0 }}>{linkCopied?"✅ Link Copied!":"📋 Copy Referral Link"}</button>
       </div>
       <div style={{ background:D.card,padding:"48px 6%",textAlign:"center" }}>
-        <h2 style={{ fontSize:24,fontWeight:800,marginBottom:8 }}>How DealKaro Works</h2>
+        <h2 style={{ fontSize:24,fontWeight:800,marginBottom:8 }}>How SaveKaro Works</h2>
         <p style={{ color:D.sub,marginBottom:40,fontSize:14 }}>3 simple steps to start earning cashback</p>
         <div style={{ display:"flex",justifyContent:"center",flexWrap:"wrap",gap:0 }}>
           {[{n:"01",icon:"🛍️",t:"Find a Deal",d:"Browse from 50+ top Indian brands"},{n:"02",icon:"🖱️",t:"Click & Shop",d:"Go directly to the product via our link"},{n:"03",icon:"💰",t:"Earn Cashback",d:"Tracked automatically, paid to your wallet"}].map((s,i) => (
@@ -800,13 +800,13 @@ function HowItWorksPage({ D }) {
     { icon:"🔍", title:"Find a Deal", desc:"Browse our curated deals from 50+ top brands like Amazon, Flipkart, Myntra, Nykaa and more." },
     { icon:"🖱️", title:"Click Our Link", desc:"Click 'Shop Now' on any deal. You'll be redirected through our secure affiliate link." },
     { icon:"🛒", title:"Shop as Usual", desc:"Add items to cart and complete your purchase on the store's website — just like you normally would." },
-    { icon:"📊", title:"Cashback is Tracked", desc:"The store records that you came through DealKaro. This can take 24–72 hours to appear." },
+    { icon:"📊", title:"Cashback is Tracked", desc:"The store records that you came through SaveKaro. This can take 24–72 hours to appear." },
     { icon:"✅", title:"Cashback Confirmed", desc:"Once your return/refund window closes (7–30 days), cashback changes from Pending to Confirmed." },
     { icon:"💰", title:"Cashback Paid", desc:"Confirmed cashback is paid to your UPI ID or bank when your balance reaches ₹100." },
   ];
   return (
     <div style={{ padding:"28px 6% 48px",maxWidth:780,margin:"0 auto" }}>
-      <h1 style={{ fontSize:26,fontWeight:900,marginBottom:6,textAlign:"center" }}>❓ How DealKaro Cashback Works</h1>
+      <h1 style={{ fontSize:26,fontWeight:900,marginBottom:6,textAlign:"center" }}>❓ How SaveKaro Cashback Works</h1>
       <p style={{ color:D.sub,fontSize:14,textAlign:"center",marginBottom:36,lineHeight:1.7 }}>Everything you need to know about earning and receiving your cashback</p>
       <div style={{ display:"flex",flexDirection:"column",gap:16 }}>
         {steps.map((s,i) => (
@@ -818,7 +818,7 @@ function HowItWorksPage({ D }) {
       </div>
       <div style={{ background:D.card,border:"2px solid #FF572233",borderRadius:14,padding:"20px",marginTop:24 }}>
         <h3 style={{ fontWeight:800,fontSize:15,color:"#FF5722",marginBottom:10 }}>⚠️ Important Notes</h3>
-        {["Always click our link before adding to cart — links clicked earlier may not be tracked.","Don't use Incognito mode or clear cookies before completing purchase.","Cancelled or returned orders will have cashback reversed.","Cashback rates may vary — always check the rate shown on DealKaro before shopping."].map((t,i) => <div key={i} style={{ display:"flex",gap:9,marginBottom:7,fontSize:13,color:D.sub,lineHeight:1.6 }}><span>•</span><span>{t}</span></div>)}
+        {["Always click our link before adding to cart — links clicked earlier may not be tracked.","Don't use Incognito mode or clear cookies before completing purchase.","Cancelled or returned orders will have cashback reversed.","Cashback rates may vary — always check the rate shown on SaveKaro before shopping."].map((t,i) => <div key={i} style={{ display:"flex",gap:9,marginBottom:7,fontSize:13,color:D.sub,lineHeight:1.6 }}><span>•</span><span>{t}</span></div>)}
       </div>
     </div>
   );
@@ -828,8 +828,8 @@ function LegalPage({ D }) {
   const [tab, setTab] = useState("privacy");
   const content = {
     privacy:[["Information We Collect","We collect your name, email address, WhatsApp number (when you subscribe to deal alerts), and anonymous usage data to improve our service."],["How We Use It","Your contact information is used only to send deal alerts and cashback updates you opted into. We never sell your personal data to third parties."],["Cookies","We use cookies to track affiliate referrals and analyze site traffic via Google Analytics. You can disable cookies in your browser settings, but this may affect cashback tracking."],["Third-Party Links","Our site contains affiliate links to third-party stores. We are not responsible for the privacy practices of those sites."],["Contact",`For privacy concerns, email us at ${SITE.email}`]],
-    terms:[["Use of Site","DealKaro is a free affiliate deals platform. You may browse and click our links for personal, non-commercial use only."],["Affiliate Relationship","We earn a commission when you purchase through our links. This comes from the retailer — not from you — and does not affect the price you pay."],["Cashback","Cashback amounts shown are estimates. Actual cashback may vary. DealKaro is not responsible for missed cashback due to cookie issues or retailer policy changes."],["Accuracy","We strive to keep prices and offers accurate, but deals change frequently. Always verify the final price on the retailer's site."],["Limitation of Liability","DealKaro is not liable for any loss or damage arising from use of our site or affiliated retailers."]],
-    affiliate:[["What is an Affiliate Link?","An affiliate link is a special URL with a unique tracking code. When you click our link and purchase, the retailer pays DealKaro a small commission."],["Does It Cost You More?","No. The price you pay is exactly the same. The commission comes from the retailer's marketing budget."],["Programs We Participate In","DealKaro participates in Amazon Associates, Flipkart Affiliate, Myntra Affiliate, Nykaa Affiliate, Ajio Affiliate, and other Indian retailer programs."],["ASCI Compliance","In accordance with ASCI guidelines (India), we disclose that this site contains affiliate links and we may earn compensation when you click them."],["Editorial Independence","Our deal selection is based on genuine value to users. Affiliate relationships do not influence which deals we feature."]],
+    terms:[["Use of Site","SaveKaro is a free affiliate deals platform. You may browse and click our links for personal, non-commercial use only."],["Affiliate Relationship","We earn a commission when you purchase through our links. This comes from the retailer — not from you — and does not affect the price you pay."],["Cashback","Cashback amounts shown are estimates. Actual cashback may vary. SaveKaro is not responsible for missed cashback due to cookie issues or retailer policy changes."],["Accuracy","We strive to keep prices and offers accurate, but deals change frequently. Always verify the final price on the retailer's site."],["Limitation of Liability","SaveKaro is not liable for any loss or damage arising from use of our site or affiliated retailers."]],
+    affiliate:[["What is an Affiliate Link?","An affiliate link is a special URL with a unique tracking code. When you click our link and purchase, the retailer pays SaveKaro a small commission."],["Does It Cost You More?","No. The price you pay is exactly the same. The commission comes from the retailer's marketing budget."],["Programs We Participate In","SaveKaro participates in Amazon Associates, Flipkart Affiliate, Myntra Affiliate, Nykaa Affiliate, Ajio Affiliate, and other Indian retailer programs."],["ASCI Compliance","In accordance with ASCI guidelines (India), we disclose that this site contains affiliate links and we may earn compensation when you click them."],["Editorial Independence","Our deal selection is based on genuine value to users. Affiliate relationships do not influence which deals we feature."]],
   };
   return (
     <div style={{ padding:"28px 6% 48px",maxWidth:760,margin:"0 auto" }}>

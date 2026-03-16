@@ -1,10 +1,17 @@
 /* ═══════════════════════════════════════════
    data.js  —  All site data in one place
-   Replace YOUR_*_TAG values with real IDs
+   Amazon tag: savekaro0e-21 ✅
+   Flipkart: apply at affiliate.flipkart.com
+   Myntra/Nykaa/Ajio: apply at vcommission.com
 ═══════════════════════════════════════════ */
 
 export const REDIRECT_MAP = {
-  "go-amazon":    "https://www.amazon.in/?tag=YOUR_AMAZON_TAG",
+
+  /* ── STORE HOMEPAGES ────────────────────────────────────────
+     Customer lands here → browses → buys anything → you earn
+     Amazon cookie = 24 hrs (you earn on EVERYTHING they buy)
+  ──────────────────────────────────────────────────────────── */
+  "go-amazon":    "https://www.amazon.in/?tag=savekaro0e-21",
   "go-myntra":    "https://www.myntra.com/?utm_source=affiliate&utm_medium=YOUR_MYNTRA_TAG",
   "go-flipkart":  "https://www.flipkart.com/?affid=YOUR_FLIPKART_TAG",
   "go-nykaa":     "https://www.nykaa.com/?ref=YOUR_NYKAA_TAG",
@@ -12,20 +19,63 @@ export const REDIRECT_MAP = {
   "go-swiggy":    "https://www.swiggy.com/?ref=YOUR_SWIGGY_TAG",
   "go-mmt":       "https://www.makemytrip.com/?affid=YOUR_MMT_TAG",
   "go-meesho":    "https://www.meesho.com/?ref=YOUR_MEESHO_TAG",
-  "amz-tv-1":     "https://www.amazon.in/dp/B0CHX2HFQG?tag=YOUR_AMAZON_TAG",
-  "fk-iphone-2":  "https://www.flipkart.com/apple-iphone-15/p/itm?affid=YOUR_FLIPKART_TAG",
-  "amz-boat-3":   "https://www.amazon.in/dp/B09YRBFJQ7?tag=YOUR_AMAZON_TAG",
-  "myn-jeans-4":  "https://www.myntra.com/levis/511/p/123?utm_source=aff&utm_medium=YOUR_MYNTRA_TAG",
-  "ajio-nike-5":  "https://www.ajio.com/nike-air-max/p/460358?ref=YOUR_AJIO_TAG",
-  "myn-dress-6":  "https://www.myntra.com/hm/dress/p/456?utm_source=aff&utm_medium=YOUR_MYNTRA_TAG",
-  "amz-cook-7":   "https://www.amazon.in/dp/B07WQKB7YX?tag=YOUR_AMAZON_TAG",
-  "fk-dyson-8":   "https://www.flipkart.com/dyson-v11/p/itm?affid=YOUR_FLIPKART_TAG",
-  "nyk-lakme-9":  "https://www.nykaa.com/lakme-lipstick/p/123?ref=YOUR_NYKAA_TAG",
-  "nyk-serum-10": "https://www.nykaa.com/minimalist-serum/p/456?ref=YOUR_NYKAA_TAG",
-  "amz-gym-11":   "https://www.amazon.in/dp/B08CXYZ123?tag=YOUR_AMAZON_TAG",
-  "fk-yon-12":    "https://www.flipkart.com/yonex-racket/p/itm?affid=YOUR_FLIPKART_TAG",
-  "cpn-amazon":   "https://www.amazon.in/?tag=YOUR_AMAZON_TAG",
-  "cpn-myntra":   "https://www.myntra.com/?utm_source=aff&utm_medium=YOUR_MYNTRA_TAG",
+
+  /* ── AMAZON CATEGORY PAGES ──────────────────────────────────
+     These are the most powerful links — customer can buy
+     anything in the category and you earn commission
+  ──────────────────────────────────────────────────────────── */
+  "amz-deals":      "https://www.amazon.in/deals?tag=savekaro0e-21",
+  "amz-sale":       "https://www.amazon.in/gp/goldbox?tag=savekaro0e-21",
+  "amz-electronics":"https://www.amazon.in/s?k=electronics&tag=savekaro0e-21",
+  "amz-mobiles":    "https://www.amazon.in/s?k=smartphones&tag=savekaro0e-21",
+  "amz-fashion":    "https://www.amazon.in/s?k=fashion&tag=savekaro0e-21",
+  "amz-home":       "https://www.amazon.in/s?k=home+kitchen&tag=savekaro0e-21",
+  "amz-beauty":     "https://www.amazon.in/s?k=beauty&tag=savekaro0e-21",
+  "amz-sports":     "https://www.amazon.in/s?k=sports+fitness&tag=savekaro0e-21",
+
+  /* ── AMAZON PRODUCT SEARCH LINKS ───────────────────────────
+     Search links work for ALL products — no need for
+     individual ASINs. Customer searches → buys → you earn.
+     Even if they buy a DIFFERENT product from search = you earn!
+  ──────────────────────────────────────────────────────────── */
+  "amz-tv-1":    "https://www.amazon.in/s?k=Samsung+65+inch+4K+QLED+Smart+TV&tag=savekaro0e-21",
+  "amz-boat-3":  "https://www.amazon.in/s?k=boAt+Airdopes+141+TWS+Earbuds&tag=savekaro0e-21",
+  "amz-cook-7":  "https://www.amazon.in/s?k=Prestige+Induction+Cooktop&tag=savekaro0e-21",
+  "amz-gym-11":  "https://www.amazon.in/s?k=Boldfit+Gym+Gloves+Wrist+Support&tag=savekaro0e-21",
+
+  /* ── FLIPKART PRODUCTS ──────────────────────────────────────
+     Replace YOUR_FLIPKART_TAG after applying at:
+     affiliate.flipkart.com
+  ──────────────────────────────────────────────────────────── */
+  "fk-iphone-2": "https://www.flipkart.com/search?q=Apple+iPhone+15+128GB&affid=YOUR_FLIPKART_TAG",
+  "fk-dyson-8":  "https://www.flipkart.com/search?q=Dyson+V11+Vacuum+Cleaner&affid=YOUR_FLIPKART_TAG",
+  "fk-yon-12":   "https://www.flipkart.com/search?q=Yonex+Muscle+Power+Badminton+Racket&affid=YOUR_FLIPKART_TAG",
+
+  /* ── MYNTRA PRODUCTS ────────────────────────────────────────
+     Replace YOUR_MYNTRA_TAG after applying at:
+     vcommission.com → apply for Myntra program
+  ──────────────────────────────────────────────────────────── */
+  "myn-jeans-4": "https://www.myntra.com/levis?utm_source=affiliate&utm_medium=YOUR_MYNTRA_TAG",
+  "myn-dress-6": "https://www.myntra.com/hm?utm_source=affiliate&utm_medium=YOUR_MYNTRA_TAG",
+
+  /* ── AJIO PRODUCTS ──────────────────────────────────────────
+     Replace YOUR_AJIO_TAG after applying at:
+     vcommission.com → apply for Ajio program
+  ──────────────────────────────────────────────────────────── */
+  "ajio-nike-5": "https://www.ajio.com/s/nike-shoes?ref=YOUR_AJIO_TAG",
+
+  /* ── NYKAA PRODUCTS ─────────────────────────────────────────
+     Replace YOUR_NYKAA_TAG after applying at:
+     vcommission.com → apply for Nykaa program
+  ──────────────────────────────────────────────────────────── */
+  "nyk-lakme-9":  "https://www.nykaa.com/lakme?ref=YOUR_NYKAA_TAG",
+  "nyk-serum-10": "https://www.nykaa.com/minimalist?ref=YOUR_NYKAA_TAG",
+
+  /* ── COUPON PAGE LINKS ──────────────────────────────────────
+     When user copies a coupon and clicks Shop Now
+  ──────────────────────────────────────────────────────────── */
+  "cpn-amazon":   "https://www.amazon.in/?tag=savekaro0e-21",
+  "cpn-myntra":   "https://www.myntra.com/?utm_source=affiliate&utm_medium=YOUR_MYNTRA_TAG",
   "cpn-flipkart": "https://www.flipkart.com/?affid=YOUR_FLIPKART_TAG",
   "cpn-nykaa":    "https://www.nykaa.com/?ref=YOUR_NYKAA_TAG",
   "cpn-swiggy":   "https://www.swiggy.com/?ref=YOUR_SWIGGY_TAG",
@@ -33,16 +83,16 @@ export const REDIRECT_MAP = {
 };
 
 export const SITE = {
-  name: "DealKaro",
-  url: "https://dealkaro.in",
+  name: "SaveKaro",
+  url: "https://savekaro.vercel.app",
   whatsapp: "https://wa.me/91XXXXXXXXXX",
-  instagram: "https://instagram.com/youraccount",
-  email: "support@dealkaro.in",
+  instagram: "https://instagram.com/savekaro.in",
+  email: "support@savekaro.in",
   whatsappGroup: "https://chat.whatsapp.com/YOUR_GROUP_INVITE",
 };
 
 export const BANNERS = [
-  { id:1, title:"Amazon Great Indian Festival", subtitle:"Up to 80% OFF + Extra 10% Bank Discount", cta:"Shop Now", badge:"LIVE NOW", store:"Amazon", slug:"go-amazon", gradient:"linear-gradient(135deg,#FF9900,#e65c00)", expires: Date.now() + 3*24*3600*1000 },
+  { id:1, title:"Amazon Great Indian Festival", subtitle:"Up to 80% OFF + Extra 10% Bank Discount", cta:"Shop Now", badge:"LIVE NOW", store:"Amazon", slug:"amz-deals", gradient:"linear-gradient(135deg,#FF9900,#e65c00)", expires: Date.now() + 3*24*3600*1000 },
   { id:2, title:"Myntra End of Reason Sale", subtitle:"Minimum 50% OFF on Top Fashion Brands", cta:"Explore Deals", badge:"TRENDING", store:"Myntra", slug:"go-myntra", gradient:"linear-gradient(135deg,#FF3F6C,#c0134a)", expires: Date.now() + 5*24*3600*1000 },
   { id:3, title:"Flipkart Big Billion Days", subtitle:"Biggest Sale of the Year — Prices Slashed", cta:"Grab Deals", badge:"HOT", store:"Flipkart", slug:"go-flipkart", gradient:"linear-gradient(135deg,#2874F0,#0a52c4)", expires: Date.now() + 2*24*3600*1000 },
 ];
@@ -74,12 +124,12 @@ export const PRODUCTS = [
 ];
 
 export const COUPONS = [
-  { id:1, store:"Amazon",     storeColor:"#FF9900", storeBg:"#FFF8ED", code:"AMAZON200",  desc:"Extra ₹200 off on orders above ₹1,499",       expiry:"31 Mar 2026", slug:"cpn-amazon"   },
-  { id:2, store:"Myntra",     storeColor:"#FF3F6C", storeBg:"#FFF0F4", code:"MYNTRA30",   desc:"30% off on Fashion — Min. order ₹999",         expiry:"20 Mar 2026", slug:"cpn-myntra"   },
-  { id:3, store:"Flipkart",   storeColor:"#2874F0", storeBg:"#EEF4FF", code:"FLIPNEW10",  desc:"Extra 10% off for new users",                  expiry:"28 Mar 2026", slug:"cpn-flipkart" },
-  { id:4, store:"Nykaa",      storeColor:"#FC2779", storeBg:"#FFF0F6", code:"NYKAA15",    desc:"15% off on Beauty orders above ₹599",          expiry:"25 Mar 2026", slug:"cpn-nykaa"    },
-  { id:5, store:"Swiggy",     storeColor:"#FC8019", storeBg:"#FFF5EE", code:"SWIGGY50",   desc:"Flat ₹50 off on your next food order",         expiry:"18 Mar 2026", slug:"cpn-swiggy"   },
-  { id:6, store:"MakeMyTrip", storeColor:"#00A8E1", storeBg:"#EDF8FD", code:"MMT500",     desc:"₹500 off on Hotel bookings above ₹3,000",     expiry:"30 Apr 2026", slug:"cpn-mmt"      },
+  { id:1, store:"Amazon",     storeColor:"#FF9900", storeBg:"#FFF8ED", code:"AMAZON200",  desc:"Extra ₹200 off on orders above ₹1,499",   expiry:"31 Mar 2026", slug:"cpn-amazon"   },
+  { id:2, store:"Myntra",     storeColor:"#FF3F6C", storeBg:"#FFF0F4", code:"MYNTRA30",   desc:"30% off on Fashion — Min. order ₹999",     expiry:"20 Mar 2026", slug:"cpn-myntra"   },
+  { id:3, store:"Flipkart",   storeColor:"#2874F0", storeBg:"#EEF4FF", code:"FLIPNEW10",  desc:"Extra 10% off for new users",               expiry:"28 Mar 2026", slug:"cpn-flipkart" },
+  { id:4, store:"Nykaa",      storeColor:"#FC2779", storeBg:"#FFF0F6", code:"NYKAA15",    desc:"15% off on Beauty orders above ₹599",      expiry:"25 Mar 2026", slug:"cpn-nykaa"    },
+  { id:5, store:"Swiggy",     storeColor:"#FC8019", storeBg:"#FFF5EE", code:"SWIGGY50",   desc:"Flat ₹50 off on your next food order",     expiry:"18 Mar 2026", slug:"cpn-swiggy"   },
+  { id:6, store:"MakeMyTrip", storeColor:"#00A8E1", storeBg:"#EDF8FD", code:"MMT500",     desc:"₹500 off on Hotel bookings above ₹3,000", expiry:"30 Apr 2026", slug:"cpn-mmt"      },
 ];
 
 export const STORES = [
@@ -94,22 +144,22 @@ export const STORES = [
 ];
 
 export const SPIN_PRIZES = [
-  { label:"₹50 Off",     code:"SPIN50",    color:"#FF5722", prob:0.20 },
-  { label:"5% Extra",    code:"SPIN5PCT",  color:"#2874F0", prob:0.20 },
-  { label:"Free Ship",   code:"FREESHIP",  color:"#48BB78", prob:0.15 },
-  { label:"Try Again",   code:null,        color:"#a0aec0", prob:0.20 },
-  { label:"₹100 Off",    code:"SPIN100",   color:"#F6AD55", prob:0.10 },
-  { label:"10% Extra",   code:"SPIN10PCT", color:"#FC2779", prob:0.10 },
-  { label:"₹200 Off",    code:"SPIN200",   color:"#805AD5", prob:0.03 },
-  { label:"Jackpot!",    code:"JACKPOT",   color:"#FF9900", prob:0.02 },
+  { label:"₹50 Off",   code:"SPIN50",    color:"#FF5722", prob:0.20 },
+  { label:"5% Extra",  code:"SPIN5PCT",  color:"#2874F0", prob:0.20 },
+  { label:"Free Ship", code:"FREESHIP",  color:"#48BB78", prob:0.15 },
+  { label:"Try Again", code:null,        color:"#a0aec0", prob:0.20 },
+  { label:"₹100 Off",  code:"SPIN100",   color:"#F6AD55", prob:0.10 },
+  { label:"10% Extra", code:"SPIN10PCT", color:"#FC2779", prob:0.10 },
+  { label:"₹200 Off",  code:"SPIN200",   color:"#805AD5", prob:0.03 },
+  { label:"Jackpot!",  code:"JACKPOT",   color:"#FF9900", prob:0.02 },
 ];
 
 export const SORT_OPTIONS = [
-  { value:"default",   label:"Default",           labelHi:"डिफ़ॉल्ट"           },
-  { value:"discount",  label:"Highest Discount",   labelHi:"सबसे ज़्यादा छूट"  },
-  { value:"cashback",  label:"Highest Cashback",   labelHi:"सबसे ज़्यादा कैशबैक"},
-  { value:"priceLow",  label:"Price: Low → High",  labelHi:"कीमत: कम से ज़्यादा"},
-  { value:"priceHigh", label:"Price: High → Low",  labelHi:"कीमत: ज़्यादा से कम"},
-  { value:"rating",    label:"Highest Rated",       labelHi:"सबसे अधिक रेटेड"   },
-  { value:"expiring",  label:"Expiring Soon",       labelHi:"जल्द समाप्त"        },
+  { value:"default",   label:"Default",           labelHi:"डिफ़ॉल्ट"            },
+  { value:"discount",  label:"Highest Discount",  labelHi:"सबसे ज़्यादा छूट"   },
+  { value:"cashback",  label:"Highest Cashback",  labelHi:"सबसे ज़्यादा कैशबैक" },
+  { value:"priceLow",  label:"Price: Low → High", labelHi:"कीमत: कम से ज़्यादा" },
+  { value:"priceHigh", label:"Price: High → Low", labelHi:"कीमत: ज़्यादा से कम" },
+  { value:"rating",    label:"Highest Rated",     labelHi:"सबसे अधिक रेटेड"    },
+  { value:"expiring",  label:"Expiring Soon",     labelHi:"जल्द समाप्त"         },
 ];
