@@ -81,8 +81,8 @@ export const REDIRECT_MAP = {
 };
 
 export const SITE = {
-  name:           "SaveKaro",
-  url:            "https://save-karo.vercel.app",
+  name:           "SaveEarn",
+  url:            "https://saveearn.vercel.app",
   whatsapp:       "https://wa.me/917052557408",
   whatsappGroup:  "https://whatsapp.com/channel/0029VbC98wKHrDZWUnPjB72O",
   instagram:      "https://www.instagram.com/savekaro2026/",
@@ -178,7 +178,7 @@ export const PRODUCTS = [
   { id:14, category:"beauty",      store:"Mamaearth", storeColor:"#16A34A", title:"Mamaearth Vitamin C Face Wash",        image:"https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&q=80",  mrp:299,    price:199,    cashbackPct:12, badge:"33% OFF",      badgeColor:"#E53E3E", slug:"go-mamaearth", rating:4.3, reviews:15420, clicks:9800,  flashSale:false, inStock:true,  topDeal:true,  expiresHours:96, comparePrice:{}, tags:["face wash","vitamin c","mamaearth","skincare"], userReviews:[{name:"Sneha K.",stars:5,text:"Glowing skin after just 2 weeks of use!",date:"2026-03-10"},{name:"Aditya P.",stars:4,text:"Good product, refreshing feel.",date:"2026-03-05"}] },
   { id:15, category:"health",      store:"MuscleBlaze", storeColor:"#DC2626", title:"MuscleBlaze Whey Protein 1kg",      image:"https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=400&q=80",  mrp:1999,   price:1499,   cashbackPct:9,  badge:"25% OFF",      badgeColor:"#E53E3E", slug:"go-muscleblaze",rating:4.5,reviews:22341, clicks:11200, flashSale:false, inStock:true,  topDeal:true,  expiresHours:48, comparePrice:{}, tags:["protein","whey","muscleblaze","fitness","gym"], userReviews:[{name:"Vikash G.",stars:5,text:"Great taste and mixes well. Good results.",date:"2026-03-07"},{name:"Anjali S.",stars:4,text:"Quality protein at good price.",date:"2026-03-01"}] },
   { id:16, category:"electronics", store:"Croma",    storeColor:"#1E293B", title:"Noise ColorFit Pro 4 Smartwatch",      image:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&q=80",  mrp:4999,   price:2499,   cashbackPct:6,  badge:"50% OFF",      badgeColor:"#E53E3E", slug:"go-noise",     rating:4.2, reviews:6234,  clicks:7800,  flashSale:true,  inStock:true,  topDeal:false, expiresHours:24, comparePrice:{}, tags:["smartwatch","noise","fitness","watch"],          userReviews:[{name:"Kartik M.",stars:4,text:"Great display and battery life.",date:"2026-03-09"},{name:"Pooja R.",stars:4,text:"Good value smartwatch.",date:"2026-03-04"}] },
-  { id:17, category:"travel",      store:"MakeMyTrip",storeColor:"#00A8E1",title:"Flight Deals — Book & Earn Cashback",  image:"https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=80",  mrp:5000,   price:3500,   cashbackPct:6,  badge:"Save More",    badgeColor:"#00A8E1", slug:"go-mmt",       rating:4.3, reviews:34512, clicks:8900,  flashSale:false, inStock:true,  topDeal:false, expiresHours:168,comparePrice:{}, tags:["flight","travel","makemytrip","hotel","booking"],userReviews:[{name:"Ramesh N.",stars:4,text:"Easy booking and great deals.",date:"2026-03-06"},{name:"Kavita S.",stars:5,text:"Saved ₹2000 using SaveKaro link!",date:"2026-02-28"}] },
+  { id:17, category:"travel",      store:"MakeMyTrip",storeColor:"#00A8E1",title:"Flight Deals — Book & Earn Cashback",  image:"https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=80",  mrp:5000,   price:3500,   cashbackPct:6,  badge:"Save More",    badgeColor:"#00A8E1", slug:"go-mmt",       rating:4.3, reviews:34512, clicks:8900,  flashSale:false, inStock:true,  topDeal:false, expiresHours:168,comparePrice:{}, tags:["flight","travel","makemytrip","hotel","booking"],userReviews:[{name:"Ramesh N.",stars:4,text:"Easy booking and great deals.",date:"2026-03-06"},{name:"Kavita S.",stars:5,text:"Saved ₹2000 using SaveEarn link!",date:"2026-02-28"}] },
 ];
 
 export const COUPONS = [

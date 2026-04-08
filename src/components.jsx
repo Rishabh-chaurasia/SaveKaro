@@ -114,7 +114,7 @@ export function SpinWheel({ D, onClose, onWin }) {
 export function ShareButtons({ product, D }) {
   const [open, setOpen] = useState(false);
   const url = `${SITE.url}?deal=${product.slug}`;
-  const text = `🔥 ${product.title} at just ₹${product.price.toLocaleString("en-IN")} (${Math.round(((product.mrp-product.price)/product.mrp)*100)}% OFF)! + ${product.cashbackPct}% cashback via SaveKaro`;
+  const text = `🔥 ${product.title} at just ₹${product.price.toLocaleString("en-IN")} (${Math.round(((product.mrp-product.price)/product.mrp)*100)}% OFF)! + ${product.cashbackPct}% cashback via SaveEarn`;
 
   const share = (platform) => {
     const links = {
@@ -337,11 +337,11 @@ export function LoginModal({ D, onClose, onLogin }) {
         {/* Logo */}
         <div style={{ width:56,height:56,background:"linear-gradient(135deg,#FF5722,#FF9800)",borderRadius:16,display:"flex",alignItems:"center",justifyContent:"center",fontSize:26,margin:"0 auto 12px",boxShadow:"0 8px 24px rgba(255,87,34,.3)" }}>💸</div>
         <h2 style={{ fontWeight:900,fontSize:20,marginBottom:4 }}>
-          {mode==="options"?"Join SaveKaro":mode==="email-login"?"Welcome Back":"Create Account"}
+          {mode==="options"?"Join SaveEarn":mode==="email-login"?"Welcome Back":"Create Account"}
         </h2>
         <p style={{ color:D.sub,fontSize:13,marginBottom:20,lineHeight:1.6 }}>
           {mode==="options"?"Sign in to track cashback, earn points & save wishlists":
-           mode==="email-login"?"Login with your SaveKaro account":"Register free — takes 30 seconds!"}
+           mode==="email-login"?"Login with your SaveEarn account":"Register free — takes 30 seconds!"}
         </p>
 
         {/* ── OPTIONS SCREEN ── */}
@@ -435,7 +435,7 @@ export function LoginModal({ D, onClose, onLogin }) {
 ══════════════════════════════════ */
 export function AIChatbot({ D, products, onShop, onClose }) {
   const [messages, setMessages] = useState([
-    { role:"assistant", text:"Hi! 👋 I'm SaveKaro AI. Tell me what you're looking for — like 'best earphones under ₹2000' or 'show me top fashion deals' or 'gift ideas under ₹3000'." }
+    { role:"assistant", text:"Hi! 👋 I'm SaveEarn AI. Tell me what you're looking for — like 'best earphones under ₹2000' or 'show me top fashion deals' or 'gift ideas under ₹3000'." }
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -575,7 +575,7 @@ export function AIChatbot({ D, products, onShop, onClose }) {
         body: JSON.stringify({
           model: "claude-haiku-4-5-20251001",
           max_tokens: 400,
-          system: `You are SaveKaro AI, a helpful shopping assistant for an Indian cashback & deals website.
+          system: `You are SaveEarn AI, a helpful shopping assistant for an Indian cashback & deals website.
 
 PRODUCT CATALOG (all available products):
 ${catalog}
@@ -627,7 +627,7 @@ RULES:
           <div style={{ display:"flex",alignItems:"center",gap:10 }}>
             <div style={{ width:36,height:36,background:"rgba(255,255,255,.2)",borderRadius:"50%",display:"flex",alignItems:"center",justifyContent:"center",fontSize:18 }}>🤖</div>
             <div>
-              <div style={{ color:"#fff",fontWeight:800,fontSize:14 }}>SaveKaro AI</div>
+              <div style={{ color:"#fff",fontWeight:800,fontSize:14 }}>SaveEarn AI</div>
               <div style={{ color:"rgba(255,255,255,.75)",fontSize:11 }}>Smart deal finder ✨</div>
             </div>
           </div>

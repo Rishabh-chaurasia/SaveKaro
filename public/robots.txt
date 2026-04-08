@@ -4,7 +4,6 @@
 User-agent: *
 Allow: /
 Allow: /deals
-Allow: /coupons
 Allow: /stores
 Allow: /blog
 Allow: /partners
@@ -15,7 +14,7 @@ Disallow: /tracker
 Disallow: /api/
 
 # Sitemap location — replace with your real domain
-Sitemap: https://save-karo.vercel.app/sitemap.xml
+Sitemap: https://saveearn.vercel.app/sitemap.xml
 
 # Crawl delay (optional — be nice to bots)
 Crawl-delay: 1

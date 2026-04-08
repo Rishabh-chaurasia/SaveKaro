@@ -1,4 +1,4 @@
-# SaveKaro 💸
+# SaveEarn 💸
 
 A cashback and deals platform built for Indian shoppers. Find deals from top stores like Amazon, Flipkart, Myntra, Nykaa and more — click through our links, shop normally, and claim your cashback.
 
@@ -6,7 +6,7 @@ A cashback and deals platform built for Indian shoppers. Find deals from top sto
 
 ## What is this?
 
-I built SaveKaro because I was tired of missing out on cashback while shopping online. Most cashback apps are either too complicated, don't support Indian payment methods, or take forever to pay out. SaveKaro keeps it simple — you shop, you claim, we verify, we pay.
+I built SaveEarn because I was tired of missing out on cashback while shopping online. Most cashback apps are either too complicated, don't support Indian payment methods, or take forever to pay out. SaveKaro keeps it simple — you shop, you claim, we verify, we pay.
 
 The site works as an affiliate cashback platform. When you click a deal through SaveKaro and buy something, the store pays us a small commission. We share a portion of that commission back with you as cashback.
 
@@ -90,8 +90,8 @@ public/
 **Install**
 
 ```bash
-git clone https://github.com/yourusername/savekaro.git
-cd savekaro
+git clone https://github.com/yourusername/saveearn.git
+cd saveearn
 npm install --legacy-peer-deps
 ```
 
@@ -196,5 +196,5 @@ MIT — free to use, modify and distribute.
 ## Contact
 
 Built by Rishabh Chaurasia  
-Email: support@savekaro.in  
+Email: savekaro2026@gmail.com
 Site: https://save-karo.vercel.app

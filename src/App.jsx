@@ -30,7 +30,7 @@ const LANG = {
     viewAll: "View All", findDeals: "Find Deals →",
     budget: "Budget", exploreDeals: "Explore All Deals 🎁",
     referEarn: "🏷️ Refer & Earn", copyReferral: "📋 Copy Referral Link",
-    linkCopied: "✅ Link Copied!", howSaveKaroWorks: "How SaveKaro Works",
+    linkCopied: "✅ Link Copied!", howSaveEarnWorks: "How SaveEarn Works",
     step1T: "Find a Deal", step1D: "Browse from 50+ top Indian brands",
     step2T: "Click & Shop", step2D: "Go directly to the product via our link",
     step3T: "Earn Cashback", step3D: "Tracked automatically, paid to your wallet",
@@ -75,7 +75,7 @@ const LANG = {
     viewAll: "सभी देखें", findDeals: "डील्स खोजें →",
     budget: "बजट", exploreDeals: "सभी डील्स देखें 🎁",
     referEarn: "🏷️ रेफर करें और कमाएं", copyReferral: "📋 रेफरल लिंक कॉपी करें",
-    linkCopied: "✅ लिंक कॉपी हो गया!", howSaveKaroWorks: "SaveKaro कैसे काम करता है",
+    linkCopied: "✅ लिंक कॉपी हो गया!", howSaveEarnWorks: "SaveEarn कैसे काम करता है",
     step1T: "डील खोजें", step1D: "50+ टॉप भारतीय ब्रांड्स में से चुनें",
     step2T: "क्लिक करें और खरीदें", step2D: "हमारे लिंक से सीधे प्रोडक्ट पर जाएं",
     step3T: "कैशबैक कमाएं", step3D: "अपने आप ट्रैक होता है, वॉलेट में मिलता है",
@@ -197,19 +197,21 @@ export default function App() {
   };
 
   const handleShop = (slug, storeName, product) => {
-    if (!user) {
-      showToast("Please login to earn cashback 💰", "info");
-      setShowLogin(true);
-      setPendingShop({ slug, storeName, product });
-      return;
-    }
+    // Login is OPTIONAL — guests can shop freely, logged-in users get tracking
     if (product) setRecentlyViewed(p => [product, ...p.filter(x => x.id !== product.id)].slice(0, 8));
-    trackClick(product, slug);
+    if (user) {
+      // Track only if logged in
+      trackClick(product, slug);
+    }
     goTo(slug, storeName, showToast);
+    // Gentle nudge for guests (non-blocking)
+    if (!user) {
+      setTimeout(() => showToast("💡 Login to track your cashback!", "info"), 1500);
+    }
   };
 
   const toggleWishlist = async (product) => {
-    if (!user) { showToast("Please login to save wishlists", "info"); setShowLogin(true); return; }
+    if (!user) { showToast("Login to save your wishlist ❤️", "info"); return; }
     const exists = wishlist.some(p => p.id === product.id);
     showToast(exists ? "Removed from wishlist" : "Added to wishlist ❤️", exists ? "info" : "success");
     await toggleWishlistFn(product);
@@ -352,7 +354,7 @@ export default function App() {
         <div style={{ position:"absolute",top:0,left:0,width:"75%",maxWidth:280,height:"100vh",background:dark?"#0d0f18":"#1e40af",display:"flex",flexDirection:"column",animation:"slideInRight .25s ease",boxShadow:"4px 0 24px rgba(0,0,0,.3)" }} onClick={e=>e.stopPropagation()}>
           <div style={{ padding:"18px 16px",borderBottom:"1px solid rgba(255,255,255,.1)",display:"flex",alignItems:"center",gap:10 }}>
             <div style={{ background:"#fbbf24",borderRadius:8,width:28,height:28,display:"flex",alignItems:"center",justifyContent:"center",fontSize:14 }}>💸</div>
-            <span style={{ fontSize:16,fontWeight:800,color:"#fff" }}>Save<span style={{ color:"#fbbf24" }}>Karo</span></span>
+            <span style={{ fontSize:16,fontWeight:800,color:"#fff" }}>Save<span style={{ color:"#fbbf24" }}>Earn</span></span>
             <button onClick={() => setMobileMenuOpen(false)} style={{ marginLeft:"auto",background:"none",border:"none",color:"rgba(255,255,255,.7)",fontSize:18,cursor:"pointer" }}>✕</button>
           </div>
           <div style={{ padding:"12px 8px" }}>
@@ -384,7 +386,7 @@ export default function App() {
         {/* Logo */}
         <div onClick={() => setPage("home")} style={{ display:"flex",alignItems:"center",gap:7,cursor:"pointer",userSelect:"none",flexShrink:0 }}>
           <div style={{ background:"linear-gradient(135deg,#2563eb,#7c3aed)",borderRadius:8,width:30,height:30,display:"flex",alignItems:"center",justifyContent:"center",fontSize:15 }}>💸</div>
-          <span style={{ fontSize:18,fontWeight:900,color:dark?"#fff":"#1e40af",letterSpacing:"-.3px" }}>Save<span style={{ color:"#f59e0b" }}>Karo</span></span>
+          <span style={{ fontSize:18,fontWeight:900,color:dark?"#fff":"#1e40af",letterSpacing:"-.3px" }}>Save<span style={{ color:"#f59e0b" }}>Earn</span></span>
         </div>
 
         {/* Search */}
@@ -487,7 +489,7 @@ export default function App() {
         <div>
           <div style={{ display:"flex",alignItems:"center",gap:8,marginBottom:10 }}>
             <div style={{ background:"linear-gradient(135deg,#2563eb,#7c3aed)",borderRadius:7,width:26,height:26,display:"flex",alignItems:"center",justifyContent:"center",fontSize:13 }}>💸</div>
-            <span style={{ fontSize:15,fontWeight:800,color:"#fff" }}>Save<span style={{ color:"#f59e0b" }}>Karo</span></span>
+            <span style={{ fontSize:15,fontWeight:800,color:"#fff" }}>Save<span style={{ color:"#f59e0b" }}>Earn</span></span>
           </div>
           <p style={{ fontSize:11,lineHeight:1.8,marginBottom:12 }}>India's trusted cashback & deals platform. Earn real cashback on 50+ top stores.</p>
           <div style={{ display:"flex",gap:8 }}>
@@ -518,7 +520,7 @@ export default function App() {
         </div>
       </div>
       <div style={{ borderTop:"1px solid #1e293b",padding:"12px 4%",display:"flex",justifyContent:"space-between",flexWrap:"wrap",gap:8,fontSize:11 }}>
-        <span>© 2026 SaveKaro. All rights reserved.</span>
+        <span>© 2026 SaveEarn. All rights reserved.</span>
         <span style={{ color:"#475569" }}>Affiliate Disclosure: We earn commission on purchases via our links.</span>
       </div>
     </footer>
@@ -730,10 +732,10 @@ function HomePage({ D, dark, lang, bannerIdx, setBannerIdx, onShop, onNavigate, 
 
       {/* ── HOW IT WORKS ── */}
       <div style={{ background:D.card, padding:"20px 4% 24px", marginBottom:8 }}>
-        <h2 style={{ fontSize:15,fontWeight:800,color:D.text,marginBottom:16,textAlign:"center" }}>How SaveKaro Works</h2>
+        <h2 style={{ fontSize:15,fontWeight:800,color:D.text,marginBottom:16,textAlign:"center" }}>How SaveEarn Works</h2>
         <div style={{ display:"flex",justifyContent:"center",gap:0,flexWrap:"wrap" }}>
           {[
-            { n:"1",icon:"🛒",t:"Click a Store",d:"Browse & click any store via SaveKaro" },
+            { n:"1",icon:"🛒",t:"Click a Store",d:"Browse & click any store via SaveEarn" },
             { n:"2",icon:"🛍️",t:"Shop Normally",d:"Buy as usual on the store website" },
             { n:"3",icon:"💰",t:"Claim Cashback",d:"Submit order details & get paid to UPI" },
           ].map((s,i) => (
@@ -927,7 +929,7 @@ function TrackerPage({ D, user, onLogin, purchases, loadingPurchases, deletePurc
         <div style={{ textAlign:"center",padding:"50px 0",color:D.sub }}>
           <div style={{ fontSize:52,marginBottom:12 }}>🛒</div>
           <p style={{ fontWeight:700,fontSize:16,marginBottom:8,color:D.text }}>No purchases yet</p>
-          <p style={{ fontSize:13,marginBottom:6 }}>Click any deal on SaveKaro and complete your purchase.</p>
+          <p style={{ fontSize:13,marginBottom:6 }}>Click any deal on SaveEarn and complete your purchase.</p>
           <p style={{ fontSize:12 }}>Your cashback will appear here automatically within 24–72 hours.</p>
         </div>
       ) : (
@@ -997,7 +999,7 @@ function HowItWorksPage({ D }) {
   ];
   return (
     <div style={{ padding:"28px 6% 48px",maxWidth:780,margin:"0 auto" }}>
-      <h1 style={{ fontSize:26,fontWeight:900,marginBottom:6,textAlign:"center" }}>❓ {"How SaveKaro Works"}</h1>
+      <h1 style={{ fontSize:26,fontWeight:900,marginBottom:6,textAlign:"center" }}>❓ {"How SaveEarn Works"}</h1>
       <p style={{ color:D.sub,fontSize:14,textAlign:"center",marginBottom:36,lineHeight:1.7 }}>{"3 simple steps to start earning cashback"}</p>
       <div style={{ display:"flex",flexDirection:"column",gap:16 }}>
         {steps.map((s,i) => (
@@ -1009,7 +1011,7 @@ function HowItWorksPage({ D }) {
       </div>
       <div style={{ background:D.card,border:"2px solid #FF572233",borderRadius:14,padding:"20px",marginTop:24 }}>
         <h3 style={{ fontWeight:800,fontSize:15,color:"#FF5722",marginBottom:10 }}>⚠️ Important Notes</h3>
-        {["Always click our link before adding to cart — links clicked earlier may not be tracked.","Don't use Incognito mode or clear cookies before completing purchase.","Cancelled or returned orders will have cashback reversed.","Cashback rates may vary — always check the rate shown on SaveKaro before shopping."].map((t,i) => <div key={i} style={{ display:"flex",gap:9,marginBottom:7,fontSize:13,color:D.sub,lineHeight:1.6 }}><span>•</span><span>{t}</span></div>)}
+        {["Always click our link before adding to cart — links clicked earlier may not be tracked.","Don't use Incognito mode or clear cookies before completing purchase.","Cancelled or returned orders will have cashback reversed.","Cashback rates may vary — always check the rate shown on SaveEarn before shopping."].map((t,i) => <div key={i} style={{ display:"flex",gap:9,marginBottom:7,fontSize:13,color:D.sub,lineHeight:1.6 }}><span>•</span><span>{t}</span></div>)}
       </div>
     </div>
   );
@@ -1020,8 +1022,8 @@ function LegalPage({ D }) {
   const [tab, setTab] = useState("privacy");
   const content = {
     privacy:[["Information We Collect","We collect your name, email address, WhatsApp number (when you subscribe to deal alerts), and anonymous usage data to improve our service."],["How We Use It","Your contact information is used only to send deal alerts and cashback updates you opted into. We never sell your personal data to third parties."],["Cookies","We use cookies to track affiliate referrals and analyze site traffic via Google Analytics. You can disable cookies in your browser settings, but this may affect cashback tracking."],["Third-Party Links","Our site contains affiliate links to third-party stores. We are not responsible for the privacy practices of those sites."],["Contact",`For privacy concerns, email us at ${SITE.email}`]],
-    terms:[["Use of Site","SaveKaro is a free affiliate deals platform. You may browse and click our links for personal, non-commercial use only."],["Affiliate Relationship","We earn a commission when you purchase through our links. This comes from the retailer — not from you — and does not affect the price you pay."],["Cashback","Cashback amounts shown are estimates. Actual cashback may vary. SaveKaro is not responsible for missed cashback due to cookie issues or retailer policy changes."],["Accuracy","We strive to keep prices and offers accurate, but deals change frequently. Always verify the final price on the retailer's site."],["Limitation of Liability","SaveKaro is not liable for any loss or damage arising from use of our site or affiliated retailers."]],
-    affiliate:[["What is an Affiliate Link?","An affiliate link is a special URL with a unique tracking code. When you click our link and purchase, the retailer pays SaveKaro a small commission."],["Does It Cost You More?","No. The price you pay is exactly the same. The commission comes from the retailer's marketing budget."],["Programs We Participate In","SaveKaro participates in Amazon Associates, Flipkart Affiliate, Myntra Affiliate, Nykaa Affiliate, Ajio Affiliate, and other Indian retailer programs."],["ASCI Compliance","In accordance with ASCI guidelines (India), we disclose that this site contains affiliate links and we may earn compensation when you click them."],["Editorial Independence","Our deal selection is based on genuine value to users. Affiliate relationships do not influence which deals we feature."]],
+    terms:[["Use of Site","SaveEarn is a free affiliate deals platform. You may browse and click our links for personal, non-commercial use only."],["Affiliate Relationship","We earn a commission when you purchase through our links. This comes from the retailer — not from you — and does not affect the price you pay."],["Cashback","Cashback amounts shown are estimates. Actual cashback may vary. SaveEarn is not responsible for missed cashback due to cookie issues or retailer policy changes."],["Accuracy","We strive to keep prices and offers accurate, but deals change frequently. Always verify the final price on the retailer's site."],["Limitation of Liability","SaveEarn is not liable for any loss or damage arising from use of our site or affiliated retailers."]],
+    affiliate:[["What is an Affiliate Link?","An affiliate link is a special URL with a unique tracking code. When you click our link and purchase, the retailer pays SaveEarn a small commission."],["Does It Cost You More?","No. The price you pay is exactly the same. The commission comes from the retailer's marketing budget."],["Programs We Participate In","SaveEarn participates in Amazon Associates, Flipkart Affiliate, Myntra Affiliate, Nykaa Affiliate, Ajio Affiliate, and other Indian retailer programs."],["ASCI Compliance","In accordance with ASCI guidelines (India), we disclose that this site contains affiliate links and we may earn compensation when you click them."],["Editorial Independence","Our deal selection is based on genuine value to users. Affiliate relationships do not influence which deals we feature."]],
   };
   return (
     <div style={{ padding:"28px 6% 48px",maxWidth:760,margin:"0 auto" }}>

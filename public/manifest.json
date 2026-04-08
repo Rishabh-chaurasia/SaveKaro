@@ -1,20 +1,28 @@
 {
-  "short_name": "SaveKaro",
-  "name": "SaveKaro — Cashback & Deals",
+  "short_name": "SaveEarn",
+  "name": "SaveEarn \u2014 Cashback & Deals",
   "description": "India's smartest cashback & deals platform",
   "icons": [
-    { "src": "favicon.ico", "sizes": "64x64 32x32 24x24 16x16", "type": "image/x-icon" },
-    { "src": "logo192.png", "type": "image/png", "sizes": "192x192", "purpose": "any maskable" },
-    { "src": "logo512.png", "type": "image/png", "sizes": "512x512" }
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#FF5722",
-  "background_color": "#F4F6FB",
+  "theme_color": "#2563eb",
+  "background_color": "#f0f2f5",
   "orientation": "portrait",
-  "categories": ["shopping", "finance"],
+  "categories": [
+    "shopping",
+    "finance"
+  ],
   "shortcuts": [
-    { "name": "Top Deals", "url": "/?page=deals", "description": "Browse today's top deals" },
-    { "name": "Coupons", "url": "/?page=coupons", "description": "Latest coupon codes" }
+    {
+      "name": "Top Deals",
+      "url": "/?page=deals",
+      "description": "Browse today's top deals"
+    }
   ]
 }

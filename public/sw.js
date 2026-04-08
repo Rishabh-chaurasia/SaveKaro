@@ -1,6 +1,6 @@
-/* SaveKaro Service Worker — PWA offline support */
-const CACHE = "savekaro-v2";
-const ASSETS = ["/", "/index.html"];
+/* SaveEarn Service Worker — PWA offline support */
+const CACHE = "saveearn-v1";
+const ASSETS = ["/", "/index.html", "/favicon.ico"];
 
 self.addEventListener("install", e => {
   e.waitUntil(
@@ -60,7 +60,7 @@ self.addEventListener("fetch", e => {
 
 /* ── Push notifications ─────────────────────────────────────────────── */
 self.addEventListener("push", e => {
-  const data = e.data?.json() || { title:"SaveKaro", body:"New deal alert! 🔥" };
+  const data = e.data?.json() || { title:"SaveEarn", body:"New deal alert! 🔥" };
   e.waitUntil(
     self.registration.showNotification(data.title, {
       body: data.body,
