@@ -83,7 +83,7 @@ export const REDIRECT_MAP = {
 export const SITE = {
   name:           "SaveKaro",
   url:            "https://save-karo.vercel.app",
-  whatsapp:       "https://wa.me/7052557408",
+  whatsapp:       "https://wa.me/917052557408",
   whatsappGroup:  "https://whatsapp.com/channel/0029VbC98wKHrDZWUnPjB72O",
   instagram:      "https://www.instagram.com/savekaro2026/",
   email:          "savekaro2026@gmail.com",
@@ -212,3 +212,182 @@ export const SORT_OPTIONS = [
   { value:"rating",    label:"Highest Rated",     labelHi:"सबसे अधिक रेटेड"    },
   { value:"expiring",  label:"Expiring Soon",     labelHi:"जल्द समाप्त"         },
 ];
+
+/* ══════════════════════════════════════════════════════════════════
+   TRENDING SEARCHES
+   Update weekly based on what's popular in India
+══════════════════════════════════════════════════════════════════ */
+export const TRENDING_SEARCHES = [
+  { label:"Boat earbuds",         slug:"amz-boat-3",      icon:"🎧" },
+  { label:"Vitamin C serum",      slug:"nyk-serum-10",    icon:"✨" },
+  { label:"White shirts",         slug:"col-shirts-500",  icon:"👕" },
+  { label:"Protein powder",       slug:"go-muscleblaze",  icon:"💪" },
+  { label:"Running shoes",        slug:"ajio-nike-5",     icon:"👟" },
+  { label:"Face wash under ₹299", slug:"go-mamaearth",    icon:"🌿" },
+  { label:"Smart TV deals",       slug:"amz-tv-1",        icon:"📺" },
+  { label:"Flight deals",         slug:"go-mmt",          icon:"✈️" },
+  { label:"Kurtas for women",     slug:"col-kurtas",      icon:"👗" },
+  { label:"Gym gloves",           slug:"amz-gym-11",      icon:"🏋️" },
+];
+
+/* ══════════════════════════════════════════════════════════════════
+   CURATED COLLECTIONS
+   Each collection = a themed group of products/stores
+   slug links to REDIRECT_MAP or a search URL
+══════════════════════════════════════════════════════════════════ */
+export const COLLECTIONS = [
+  {
+    id: "shirts-500",
+    title: "Best Shirts Under ₹500",
+    subtitle: "Top picks from Myntra & Ajio",
+    icon: "👕",
+    color: "#2874F0",
+    gradient: "linear-gradient(135deg,#2874F0,#0a52c4)",
+    items: [
+      { title:"Men's Casual Shirts",     store:"Myntra",   cashback:"12%", slug:"go-myntra",   tag:"Under ₹499",  img:"https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=300&q=80" },
+      { title:"Formal White Shirts",     store:"Ajio",     cashback:"15%", slug:"go-ajio",     tag:"Under ₹499",  img:"https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=300&q=80" },
+      { title:"Cotton Polo T-Shirts",    store:"Flipkart", cashback:"10%", slug:"go-flipkart", tag:"Under ₹399",  img:"https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=300&q=80" },
+      { title:"Printed Casual Shirts",   store:"Myntra",   cashback:"12%", slug:"go-myntra",   tag:"Trending 🔥", img:"https://images.unsplash.com/photo-1603251579431-8041402bdeda?w=300&q=80" },
+    ]
+  },
+  {
+    id: "skincare-299",
+    title: "Skincare Under ₹299",
+    subtitle: "Best value beauty products",
+    icon: "✨",
+    color: "#FC2779",
+    gradient: "linear-gradient(135deg,#FC2779,#9C27B0)",
+    items: [
+      { title:"Vitamin C Face Wash",     store:"Mamaearth", cashback:"12%", slug:"go-mamaearth",  tag:"Best Seller", img:"https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=300&q=80" },
+      { title:"Niacinamide Serum",       store:"Nykaa",     cashback:"7%",  slug:"nyk-serum-10",  tag:"Viral ⚡",    img:"https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=300&q=80" },
+      { title:"Coffee Body Scrub",       store:"mCaffeine",  cashback:"12%", slug:"go-mcaffeine",  tag:"Under ₹299",  img:"https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=300&q=80" },
+      { title:"Moisturizer SPF 50",      store:"Plum",      cashback:"10%", slug:"go-plum",       tag:"New Arrival", img:"https://images.unsplash.com/photo-1556228994-4df4c7261be2?w=300&q=80" },
+    ]
+  },
+  {
+    id: "earphones-1500",
+    title: "Earphones Under ₹1500",
+    subtitle: "Best audio deals right now",
+    icon: "🎧",
+    color: "#FF5722",
+    gradient: "linear-gradient(135deg,#FF5722,#FF9800)",
+    items: [
+      { title:"boAt Airdopes 141 TWS",   store:"Amazon",   cashback:"8%",  slug:"amz-boat-3",  tag:"76% OFF 🔥", img:"https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=300&q=80" },
+      { title:"Noise Earbuds Pro",       store:"Croma",    cashback:"6%",  slug:"go-croma",    tag:"Under ₹999", img:"https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=300&q=80" },
+      { title:"boAt Rockerz Headphone",  store:"Flipkart", cashback:"10%", slug:"go-flipkart", tag:"Under ₹1499",img:"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&q=80" },
+      { title:"Noise ColorFit Smartwatch",store:"Croma",   cashback:"6%",  slug:"go-noise",    tag:"Trending 🔥",img:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&q=80" },
+    ]
+  },
+  {
+    id: "gym-999",
+    title: "Gym Essentials Under ₹999",
+    subtitle: "Everything for your workout",
+    icon: "🏋️",
+    color: "#DC2626",
+    gradient: "linear-gradient(135deg,#DC2626,#7f1d1d)",
+    items: [
+      { title:"Gym Gloves Wrist Support", store:"Amazon",     cashback:"8%",  slug:"amz-gym-11",    tag:"55% OFF",     img:"https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&q=80" },
+      { title:"MuscleBlaze Whey Protein", store:"MuscleBlaze",cashback:"9%",  slug:"go-muscleblaze",tag:"Best Seller",  img:"https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=300&q=80" },
+      { title:"Running Shoes Nike",       store:"Ajio",       cashback:"15%", slug:"ajio-nike-5",   tag:"40% OFF",     img:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&q=80" },
+      { title:"Sports Badminton Racket",  store:"Flipkart",   cashback:"10%", slug:"fk-yon-12",     tag:"Top Pick",    img:"https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=300&q=80" },
+    ]
+  },
+  {
+    id: "kurtas-women",
+    title: "Trendy Kurtas for Women",
+    subtitle: "Ethnic wear at best prices",
+    icon: "👗",
+    color: "#9333EA",
+    gradient: "linear-gradient(135deg,#9333EA,#ec4899)",
+    items: [
+      { title:"Cotton Printed Kurtas",    store:"Myntra", cashback:"12%", slug:"go-myntra", tag:"50% OFF",     img:"https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=300&q=80" },
+      { title:"Anarkali Suit Sets",       store:"Ajio",   cashback:"15%", slug:"go-ajio",   tag:"New Arrival", img:"https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=300&q=80" },
+      { title:"Straight Fit Kurtas",      store:"Myntra", cashback:"12%", slug:"go-myntra", tag:"Trending 🔥", img:"https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=300&q=80" },
+      { title:"Designer Palazzo Set",     store:"Ajio",   cashback:"15%", slug:"go-ajio",   tag:"Under ₹999",  img:"https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=300&q=80" },
+    ]
+  },
+];
+
+/* ══════════════════════════════════════════════════════════════════
+   SHOP BY BUDGET
+══════════════════════════════════════════════════════════════════ */
+export const BUDGET_SECTIONS = [
+  { label:"Under ₹299",  max:299,  icon:"🤑", color:"#48BB78", slug:"go-myntra",   desc:"Daily essentials & basics" },
+  { label:"Under ₹499",  max:499,  icon:"💚", color:"#38A169", slug:"go-flipkart", desc:"Fashion & lifestyle picks"  },
+  { label:"Under ₹999",  max:999,  icon:"💛", color:"#D69E2E", slug:"go-amazon",   desc:"Electronics & gadgets"     },
+  { label:"Under ₹1999", max:1999, icon:"🧡", color:"#DD6B20", slug:"go-myntra",   desc:"Premium fashion deals"     },
+  { label:"Under ₹4999", max:4999, icon:"❤️", color:"#E53E3E", slug:"go-amazon",   desc:"Big ticket savings"        },
+];
+
+/* ══════════════════════════════════════════════════════════════════
+   OCCASION-BASED SHOPPING
+══════════════════════════════════════════════════════════════════ */
+export const OCCASIONS = [
+  {
+    id:       "birthday",
+    title:    "🎉 Birthday Gifts",
+    subtitle: "Make it special",
+    color:    "#F59E0B",
+    gradient: "linear-gradient(135deg,#F59E0B,#D97706)",
+    items: [
+      { title:"Perfume & Fragrance",     store:"Nykaa",    cashback:"7%",  slug:"go-nykaa",      img:"https://images.unsplash.com/photo-1541643600914-78b084683702?w=300&q=80", tag:"Popular" },
+      { title:"Wireless Earbuds",        store:"Amazon",   cashback:"8%",  slug:"amz-boat-3",    img:"https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=300&q=80", tag:"Gifting" },
+      { title:"Skincare Gift Set",       store:"Mamaearth",cashback:"12%", slug:"go-mamaearth",  img:"https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=300&q=80", tag:"Best Seller" },
+      { title:"Smartwatch",              store:"Croma",    cashback:"6%",  slug:"go-noise",      img:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&q=80", tag:"Trending" },
+    ]
+  },
+  {
+    id:       "anniversary",
+    title:    "💍 Anniversary",
+    subtitle: "Celebrate love",
+    color:    "#EC4899",
+    gradient: "linear-gradient(135deg,#EC4899,#BE185D)",
+    items: [
+      { title:"Couple Travel Packages",  store:"MakeMyTrip",cashback:"6%", slug:"go-mmt",        img:"https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=300&q=80", tag:"Romantic" },
+      { title:"Premium Skincare Set",    store:"Nykaa",     cashback:"7%", slug:"go-nykaa",      img:"https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=300&q=80", tag:"Gifting"  },
+      { title:"Designer Outfit",         store:"Myntra",    cashback:"12%",slug:"go-myntra",     img:"https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=300&q=80", tag:"Popular"  },
+      { title:"Luxury Watch",            store:"Flipkart",  cashback:"10%",slug:"go-flipkart",   img:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&q=80", tag:"Premium"  },
+    ]
+  },
+  {
+    id:       "new-home",
+    title:    "🏠 New Home",
+    subtitle: "Set up your dream home",
+    color:    "#0EA5E9",
+    gradient: "linear-gradient(135deg,#0EA5E9,#0369A1)",
+    items: [
+      { title:"Induction Cooktop",       store:"Amazon",   cashback:"6%",  slug:"amz-cook-7",    img:"https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=300&q=80", tag:"50% OFF" },
+      { title:"Smart TV 43 inch",        store:"Amazon",   cashback:"5%",  slug:"amz-tv-1",      img:"https://images.unsplash.com/photo-1593784991095-a205069470b6?w=300&q=80", tag:"Best Seller" },
+      { title:"Vacuum Cleaner",          store:"Flipkart", cashback:"10%", slug:"go-flipkart",   img:"https://images.unsplash.com/photo-1558317374-067fb5f30001?w=300&q=80", tag:"Essential" },
+      { title:"Home Decor & Furnishing", store:"Amazon",   cashback:"6%",  slug:"amz-home",      img:"https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=300&q=80", tag:"Trending" },
+    ]
+  },
+  {
+    id:       "college",
+    title:    "🎓 College Essentials",
+    subtitle: "Everything for campus life",
+    color:    "#6366F1",
+    gradient: "linear-gradient(135deg,#6366F1,#4338CA)",
+    items: [
+      { title:"Laptop Bags & Backpacks", store:"Amazon",   cashback:"6%",  slug:"go-amazon",     img:"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&q=80", tag:"Must Have" },
+      { title:"Casual T-Shirts & Jeans", store:"Myntra",   cashback:"12%", slug:"myn-jeans-4",   img:"https://images.unsplash.com/photo-1542272604-787c3835535d?w=300&q=80", tag:"College Wear" },
+      { title:"Wireless Earphones",      store:"Amazon",   cashback:"8%",  slug:"amz-boat-3",    img:"https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=300&q=80", tag:"Study Buddy" },
+      { title:"Protein & Nutrition",     store:"MuscleBlaze",cashback:"9%",slug:"go-muscleblaze",img:"https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=300&q=80", tag:"Fitness" },
+    ]
+  },
+];
+
+/* Flash deal — update this every hour/day manually or via admin */
+export const FLASH_DEAL = {
+  title:      "boAt Airdopes 141 TWS Earbuds",
+  subtitle:   "Limited time — only today!",
+  mrp:        4990,
+  price:      1199,
+  cashback:   "8%",
+  store:      "Amazon",
+  slug:       "amz-boat-3",
+  image:      "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=600&q=80",
+  endsIn:     Date.now() + 6 * 3600 * 1000,  // 6 hours from now
+  totalStock: 50,
+  soldCount:  34,
+};
